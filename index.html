@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>People Records</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-sanitize.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/people.json"></script>
+    <script src="js/main-controller.js"></script>
+</head>
+
+<body ng-app='app'>
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10" ng-controller="mainController" ng-init="fetchData()">
+        <h1>People Records</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Balance</th>
+                    <th>Age</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="person in peopleRecords track by $index">
+                    <td ng-bind="person.index"></td>
+                    <td ng-bind="person.balance"></td>
+                    <td ng-bind="person.age"></td>
+                    <td ng-bind="person.name"></td>
+                    <td ng-bind="person.gender"></td>
+                    <td ng-bind="person.email"></td>
+                    <td ng-bind="person.phone"></td>
+                    <td ng-bind="person.address"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-xs-1"></div>
+</body>
+
+</html>

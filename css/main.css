@@ -1,0 +1,23 @@
+h1 {
+    color: #6D929B;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+th {
+    font: bold 1.2em "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #6D929B;
+    border: 1px solid #C1DAD7;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 8px 6px 8px 12px;
+    background: #CAE8EA;
+}
+
+td {
+    border: 1px solid #C1DAD7;
+    background: #fff;
+    padding: 6px 6px 6px 12px;
+    color: #6D929B;
+}
